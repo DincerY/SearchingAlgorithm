@@ -3,10 +3,11 @@
 int linearSearch(int list[],int listLength, int key){
     for (int i = 0; i < listLength; i++) {
         if(list[i] == key){
-            return i;
+            return list[i];
         }
-        return -1;
     }
+    return -1;
+
 }
 
 int binarySearch(int list[],int listLength, int key){
@@ -34,7 +35,8 @@ int binarySearch(int list[],int listLength, int key){
 
 void main() {
     int arr[] = {10,11,12,13,14,15,16};
-    int findValue = binarySearch(arr,7,11);
+    int findValue = binarySearch(arr,7,85);
+    findValue = linearSearch(arr,7,11);
     printf("%d",findValue);
 
 }
